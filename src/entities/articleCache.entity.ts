@@ -6,9 +6,9 @@ import {
   // UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('news-cache')
-export class NewsCache {
-  constructor(data?: NewsCache) {
+@Entity('article-cache')
+export class ArticleCache {
+  constructor(data?: ArticleCache) {
     if (typeof data === 'object') {
       Object.keys(data).forEach((index) => {
         this[index] = data[index];
@@ -18,6 +18,24 @@ export class NewsCache {
 
   @PrimaryGeneratedColumn('uuid')
   id?: string;
+
+  @Column({ type: 'varchar' })
+  title: string;
+
+  @Column({ type: 'varchar' })
+  description: string;
+
+  @Column({ type: 'varchar' })
+  content: string;
+
+  @Column({ type: 'varchar' })
+  url: string;
+
+  @Column({ type: 'varchar' })
+  image: string;
+
+  @Column({ type: 'varchar' })
+  publishedAt: string;
 
   @CreateDateColumn({ type: 'timestamp' })
   createdAt?: Date;

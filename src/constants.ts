@@ -1,3 +1,3 @@
-import { NewsCache } from './entities/newsCache.entity';
+import { ArticleCache } from './entities/articleCache.entity';
 
-export const ENTITIES = [NewsCache];
+export const ENTITIES = [ArticleCache];

@@ -1,12 +1,12 @@
 import { NestFactory } from '@nestjs/core';
 import { config } from 'dotenv';
-import { NewsModule } from './modules/news.module';
+import { ArticleModule } from './modules/article.module';
 
 config();
 const { APP_PORT } = process.env;
 
 async function bootstrap() {
-  const app = await NestFactory.create(NewsModule);
+  const app = await NestFactory.create(ArticleModule);
   (global as typeof global & { app: any }).app = app;
 
   app.enableCors({ credentials: true });
