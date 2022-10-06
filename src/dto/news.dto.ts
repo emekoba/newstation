@@ -7,14 +7,14 @@ export class SortNewsFormRes {
   sortedForm: any;
 }
 
-export class getCountryDetailsRes {
-  fullCountryName: string;
+export class getNewsDetailsRes {
+  fullNewsName: string;
   continent: string;
   currencies: string;
   languages: string;
   timezones: string;
 }
 
-export class findCountryCacheRes {
+export class findNewsCacheRes {
   success: boolean;
 }

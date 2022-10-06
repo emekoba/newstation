@@ -1,8 +1,8 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import axios from 'axios';
 import {
-  findCountryCacheRes,
-  getCountryDetailsRes,
+  findNewsCacheRes,
+  getNewsDetailsRes,
   SortNewsFormReq,
   SortNewsFormRes,
 } from 'src/dto/news.dto';
