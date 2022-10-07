@@ -60,10 +60,10 @@ export class ArticleController {
       );
     }
 
-    const foundArticle = await this.articleService.findArticle(query);
+    const foundArticles = await this.articleService.findArticles(query);
 
     resp.json({
-      foundArticle,
+      foundArticles,
     });
   }
 }

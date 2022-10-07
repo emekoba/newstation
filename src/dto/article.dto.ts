@@ -18,15 +18,3 @@ export class findArticleRes {
   success: boolean;
   foundArticles?: ArticleCache[];
 }
-
-export class getArticleDetailsRes {
-  fullArticleName: string;
-  continent: string;
-  currencies: string;
-  languages: string;
-  timezones: string;
-}
-
-export class findArticleCacheRes {
-  success: boolean;
-}
