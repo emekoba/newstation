@@ -1,3 +1,38 @@
+# NEWSTATION
+
+The application has all endpoints registered to achieve what is requested. The endpoints are as follows
+
+<ul>article/fetch</ul>
+<ul>article/find</ul>
+<br/>
+
+<p>In order to test the APIs, kindly use the postman documentation provided in the GitHub repository. Also in order to successfully run the server, be sure to add the ENV values provided below.</p>
+
+<br/>
+
+DB_NAME =
+
+DB_USERNAME =
+
+DB_PASSWORD =
+
+DB_HOST = localhost
+
+PORT = 5432
+
+NEWS_TOKEN = (GNews API Token)
+
+APP_PORT = 3000
+
+<br/>
+<p>Whenever the client calls the "fetch" API, the article is cached to the database where it can be retrieved again when the client chooses to call the "find" endpoint. This helps to counter unnecessary calls to the GNews API and potentially save on costs.</p>
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
