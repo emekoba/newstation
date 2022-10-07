@@ -1,3 +1,5 @@
+import { ArticleCache } from 'src/entities/articleCache.entity';
+
 export class fetchArticlesReq {
   num: string;
 }
@@ -8,12 +10,13 @@ export class fetchArticleRes {
 }
 
 export class findArticleReq {
-  num: string;
+  title: string;
+  author: string;
 }
 
 export class findArticleRes {
   success: boolean;
-  fetchedForm: any;
+  foundArticles?: ArticleCache[];
 }
 
 export class getArticleDetailsRes {

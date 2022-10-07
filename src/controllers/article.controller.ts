@@ -48,17 +48,19 @@ export class ArticleController {
     @Query() query: findArticleReq,
     @Res({ passthrough: true }) resp: Response,
   ) {
-    if (parseInt(query.num) > 10) {
+    const { title, author } = query;
+
+    if (!title && !author) {
       throw new HttpException(
         {
           status: HttpStatus.BAD_REQUEST,
-          error: newsErrors.invalidMax,
+          error: newsErrors.invalidquery,
         },
         HttpStatus.BAD_REQUEST,
       );
     }
 
-    const foundArticle = await this.articleService.fetchArticles(query.num);
+    const foundArticle = await this.articleService.findArticle(query);
 
     resp.json({
       foundArticle,

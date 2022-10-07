@@ -35,6 +35,9 @@ export class ArticleCache {
   image: string;
 
   @Column({ type: 'varchar' })
+  author: string;
+
+  @Column({ type: 'varchar' })
   publishedAt: string;
 
   @CreateDateColumn({ type: 'timestamp' })
