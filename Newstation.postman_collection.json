@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "32892651-708f-49b3-a285-7dee332302f2",
+		"name": "Newstation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18696057"
+	},
+	"item": [
+		{
+			"name": "Find Article",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/article/find?title&author&keyword",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article",
+						"find"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": null
+						},
+						{
+							"key": "author",
+							"value": null
+						},
+						{
+							"key": "keyword",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Articles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/article/fetch?num=9",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"article",
+						"fetch"
+					],
+					"query": [
+						{
+							"key": "num",
+							"value": "9"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
